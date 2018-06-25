@@ -1,0 +1,21 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=crlf
+
+* text eol=crlf
+* text eol=crlf
+
+*.ttf binary
+*.jpg binary
+*.png binary
+*.eot binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.dat binary
+*.gif binary
+*.exe binary
+*.bin binary
+*.db binary
+*.otf binary
+*.dll binary
+*.ico binary
