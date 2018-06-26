@@ -24,7 +24,9 @@ namespace Ft.Common.ContractResolvers
                 property.ShouldDeserialize = instance => false;
             }
 
-            if (property.DeclaringType == typeof(Exception) && property.PropertyName == "TargetSite")
+            if (property.DeclaringType == typeof(Exception) && 
+                (property.PropertyName.Equals("TargetSite", StringComparison.InvariantCultureIgnoreCase) ||
+                 property.PropertyName.Equals("target_site", StringComparison.InvariantCultureIgnoreCase)))
             {
                 property.ShouldSerialize =
                     instance => false;
