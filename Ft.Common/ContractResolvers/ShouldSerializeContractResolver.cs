@@ -7,6 +7,14 @@ namespace Ft.Common.ContractResolvers
 {
     public class ShouldSerializeContractResolver : DefaultContractResolver
     {
+        public ShouldSerializeContractResolver(NamingStrategy strategy)
+        {
+            NamingStrategy = strategy;
+        }
+        public ShouldSerializeContractResolver()
+        {
+
+        }
         protected override JsonProperty CreateProperty(MemberInfo member, MemberSerialization memberSerialization)
         {
             var property = base.CreateProperty(member, memberSerialization);
